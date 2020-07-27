@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VCS</title>
+	<meta lang="en">
+	<style type="text/css">
+		a:hover{
+			background-color: #aaff99;
+		}
+		body{
+			font-family: Arial;
+		}
+		tr:hover{
+			background-color: #aaffaa;
+		}
+		input,button{
+			padding: 5px;
+			height: 100%;
+			font-size: auto;
+			border-style: solid;
+			border-radius: 5px;
+			border-color: black;
+		}
+		input[type="submit"],button{
+			background-color: #0099ff;
+		}
+		input[type="submit"]:hover,button:hover{
+			color: #0099ff;
+			background-color: black;
+		}
+	</style>
+	<script type="text/javascript">
+		var requestAccess=function(repo,branch){
+			let xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200)
+						window.location.replace("/dir/"+repo+"/"+branch)
+					alert(xhr.responseText);
+				}
+			};
+			xhr.open("POST","/requestAccess");
+			xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+			xhr.send("branchname="+branch+"&reponame="+repo,true);
+		};
+		var deleteFile=function(repo,branch,file){
+			let xhr=new XMLHttpRequest();
+			console.log(repo+branch+file);
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						alert(xhr.responseText);
+						window.location.replace("/dir/"+repo+"/"+branch)
+					}
+				}
+			};
+			xhr.open("POST","/deleteFile");
+			xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+			xhr.send("branchname="+branch+"&reponame="+repo+"&file="+file,true);
+		};
+	</script>
+</head>
+<body>
+<h1>Repository: <span style="color: #0099ff; font-style: italic;">{{reponame}}</span></h1>
+{{accessbranch|safe}}
+Branch: 
+<select id="select">
+	{{branchoption|safe}}
+</select>
+<div id="div_crBr">
+	{{createBranch|safe}}
+</div>
+<div id="files">
+	<table>
+	{{files|safe}}
+	</table>
+</div>
+<div id="upload">
+	{{uploadform|safe}}
+</div>
+<br><br><a href="/">Home</a><br>
+<script type="text/javascript">
+	let selec=document.getElementById("select");
+	selec.onchange=function(){
+		window.location.replace("/dir/{{reponame}}/"+selec.selectedOptions[0].value);
+	}
+</script>
+Error: {{msg}}
+</body>
+</html>

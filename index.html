@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VCS</title>
+	<style type="text/css">
+		#browse{
+			top: 10px;
+			right: 10px;
+			position: absolute;
+			float: right;
+		}
+		#repo{
+			color: black;
+		}
+		#branch{
+			color: #0044ff;
+		}
+		a:hover{
+			background-color: #aaff99;
+		}
+		body{
+			font-family: Arial;
+			margin: 0px;
+			padding: 10px;
+		}
+		#username{
+			color: #0099ff;
+			font-style: italic;
+		}
+		input[type="checkbox"] {
+		    background-color: initial;
+		    cursor: default;
+		    -webkit-appearance: checkbox;
+		    box-sizing: border-box;
+		    height: auto;
+		    width: 30px;
+		    size: 30px;
+		    padding: 0px;
+		}
+		div{
+			margin: 0px;
+			padding: 0px;
+		}
+		input,button{
+			padding: 5px;
+			height: 100%;
+			font-size: auto;
+			border-style: solid;
+			border-radius: 5px;
+			border-color: black;
+		}
+		input[type="submit"],button{
+			background-color: #0099ff;
+		}
+		input[type="submit"]:hover,button:hover{
+			color: #0099ff;
+			background-color: black;
+		}
+	</style>
+</head>
+
+<script type="text/javascript">
+	var getReposList=function(){
+		let dom=document.getElementById("repolist");
+		dom.innerHTML="Loading...";
+		let xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200)
+					dom.innerHTML=xhr.responseText;
+				else{
+					dom.innerHTML="Can't Fetch";
+				}
+			}
+		};
+		xhr.open("POST","/getrepolist");
+		xhr.send("",true);
+	}
+	var createRepo=function(){
+		let name=document.getElementById("repoinput");
+		let publicS=document.getElementById("public");
+		console.log(name.value+" "+publicS.checked);
+		let xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+					alert(xhr.responseText);
+					getReposList();
+					name.value="";
+					publicS.checked=false;
+				}
+				else
+					console.log(xhr.reponseCode+" : "+xhr.responseText);	
+			}
+		};
+		xhr.open("POST","/createRepository");
+		xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+		xhr.send("name="+name.value+"&public="+publicS.checked,true);
+	};
+</script>
+
+<body onload="getReposList();">
+	<div id="topnav" style="background-color: white;">
+		<div id="usernamediv" style="font-size: 30px;">Hello <span id="username">{{ username["name"] }}</span></div>
+		<div style="top: 10px; right: 10px; position: absolute; display: block; min-width: 40%;">
+			<div style="position: absolute;top: 10px; right: 10px;"><a href="/logout">Logout</a><br></div>
+			<div style="left: 0px; position: absolute; align-items: center;">
+				<form action="/search" method="GET">
+					<input type="text" name="query" placeholder="Enter repository name"></input>
+					<input type="submit" name="submit" value="Browse">
+				</form>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div id="Repositories">
+		<h2>Repositories</h2>
+		<div id="repolist">
+			No Repositories
+		</div>
+		<div title="Create Repository" style="margin-top: 20px; border-style: solid; border-width: 1px; padding: 10px;">
+			Create new repository<br>
+			<input type="text" id="repoinput" placeholder="Enter repo name"></input><br>
+			<input type="checkbox" id="public">Make it public</input><br>
+			<button onclick="createRepo();">CREATE</button>
+		</div>
+	</div>
+	<hr>
+</body>
+</html>
