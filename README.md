@@ -21,4 +21,5 @@ DBPASS="DB_PASSWORD"
 DBNAME="DB_NAME"
 
 Run the server:
+
 $> python server.py
