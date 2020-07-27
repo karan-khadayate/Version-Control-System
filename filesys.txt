@@ -1,55 +1,217 @@
 Folder PATH listing for volume Apps
 Volume serial number is 5EF7-7B7F
 D:.
+│   .gitignore
+│   dir.html
+│   enter.html
+│   filesys.txt
+│   index.html
+│   registration.png
+│   server.py
+│   server_init.py
+│   vcs.sql
+│   
 ├───files
+│   │   style.css
+│   │   
 │   ├───1233
 │   │   ├───master
+│   │   │       New Text Document.txt
+│   │   │       SAVE_20200409_215944.jpg
+│   │   │       SAVE_20200409_220018.jpg
+│   │   │       SAVE_20200409_220125.jpg
+│   │   │       SAVE_20200409_220143.jpg
+│   │   │       
 │   │   └───newbranch
+│   │           New Text Document.txt
+│   │           SAVE_20200409_215944.jpg
+│   │           SAVE_20200409_220018.jpg
+│   │           SAVE_20200409_220125.jpg
+│   │           SAVE_20200409_220143.jpg
+│   │           
 │   ├───asdf123
 │   │   ├───asdfofkaran
+│   │   │       CMRF(512x512).jpg
+│   │   │       
 │   │   ├───bass
+│   │   │       CMRF(1024x1024).png
+│   │   │       CMRF(512x512).jpg
+│   │   │       
 │   │   └───master
+│   │           CMRF(1024x1024).png
+│   │           CMRF(512x512).jpg
+│   │           
 │   ├───asdfpub
 │   │   ├───kjk
+│   │   │       79e13e362b47af4e46839e9fed50e897.svg
+│   │   │       
 │   │   ├───master
+│   │   │       79e13e362b47af4e46839e9fed50e897.svg
+│   │   │       
 │   │   └───pub1
+│   │           IMG_20200320_214326.jpg
+│   │           
 │   ├───deepal1
 │   │   ├───master
+│   │   │       BG.jpg
+│   │   │       Equations.docx
+│   │   │       flowchart-scms.drawio
+│   │   │       IEEE_Copyrights_Form.pdf
+│   │   │       
 │   │   └───mybranch
+│   │           Earth.png
+│   │           Equations.docx
+│   │           flowchart-scms.drawio
+│   │           IEEE_Copyrights_Form.pdf
+│   │           
 │   ├───deepalpublic
 │   │   └───master
+│   │           majorReport_2_1.docx
+│   │           Major_Doc_PDF.pdf
+│   │           Major_Report.docx
+│   │           
 │   ├───dhruvi_priv
 │   │   ├───b1
+│   │   │       email.png
+│   │   │       email_uni.png
+│   │   │       facebook_ubi.png
+│   │   │       
 │   │   └───master
+│   │           call.png
+│   │           email.png
+│   │           email_uni.png
+│   │           facebook_ubi.png
+│   │           
 │   ├───hiamni1
 │   │   ├───karanhimani
+│   │   │       Deepal_2.svg
+│   │   │       
 │   │   └───master
+│   │           Deepal_2.svg
+│   │           Earth.png
+│   │           
 │   ├───himpublic
 │   │   └───master
+│   │           DeepalPhInvestigatory.docx
+│   │           OSS_20200104.pptx
+│   │           PhyInv.pdf
+│   │           
 │   ├───himtest1
 │   │   ├───master
+│   │   │       CMRF(1024x1024).png
+│   │   │       CMRF(512x512).jpg
+│   │   │       CMRF144.png
+│   │   │       CMRF3kBW.png
+│   │   │       CMRF3K_c.png
+│   │   │       CMRF95.png
+│   │   │       
 │   │   ├───mybranch
+│   │   │       CMRF(512x512).jpg
+│   │   │       CMRF144.png
+│   │   │       CMRF3kBW.png
+│   │   │       CMRF3K_c.png
+│   │   │       CMRF95.png
+│   │   │       HelloThere.txt
+│   │   │       
 │   │   └───mymybranch
+│   │           CMRF(512x512).jpg
+│   │           CMRF144.png
+│   │           CMRF3kBW.png
+│   │           CMRF3K_c.png
+│   │           CMRF95.png
+│   │           
 │   ├───jahkjh
 │   │   └───master
 │   ├───karannew
 │   │   ├───asdfforkaran
+│   │   │       Deepal_2.svg
+│   │   │       Earth.png
+│   │   │       
 │   │   ├───master
+│   │   │       CCL_Report_BE4D_53,65.docx
+│   │   │       CentralisedVCS (1).docx
+│   │   │       CentralisedVCS.docx
+│   │   │       CentralisedVCS.pdf
+│   │   │       HelloThere.txt
+│   │   │       HMI_Report_BE4D_53,65,73.docx
+│   │   │       HMI_Report_BE4D_53,65,73.pdf
+│   │   │       ieeecopyrightform.docx
+│   │   │       test2.py
+│   │   │       
 │   │   └───new1
+│   │           Deepal_2.svg
+│   │           Earth.png
+│   │           
 │   ├───private
 │   │   └───master
 │   ├───private1
 │   │   ├───asdml
+│   │   │       CMRF(512x512).jpg
+│   │   │       CMRF144.png
+│   │   │       CMRF3kBW.png
+│   │   │       CMRF3K_c.png
+│   │   │       CMRF95.png
+│   │   │       q.sql
+│   │   │       
 │   │   ├───master
+│   │   │       CMRF(1024x1024).png
+│   │   │       CMRF(512x512).jpg
+│   │   │       CMRF144.png
+│   │   │       CMRF3kBW.png
+│   │   │       CMRF3K_c.png
+│   │   │       CMRF95.png
+│   │   │       
 │   │   ├───mybranch
+│   │   │       Equations.docx
+│   │   │       
 │   │   └───newbranch2
+│   │           Equations.docx
+│   │           q.sql
+│   │           
 │   ├───publictest
 │   │   ├───master
 │   │   ├───newbranch
+│   │   │       CentralisedVCS.docx
+│   │   │       DeepalPhInvestigatory.docx
+│   │   │       HelloThere.txt
+│   │   │       OSS_20200104.pptx
+│   │   │       test1.py
+│   │   │       test2.py
+│   │   │       
 │   │   ├───newbranch2
+│   │   │       CentralisedVCS.docx
+│   │   │       DeepalPhInvestigatory.docx
+│   │   │       HelloThere.txt
+│   │   │       OSS_20200104.pptx
+│   │   │       PhyInv.pdf
+│   │   │       test1.py
+│   │   │       test2.py
+│   │   │       
 │   │   ├───newbranch3
+│   │   │       CentralisedVCS.docx
+│   │   │       DeepalPhInvestigatory.docx
+│   │   │       HelloThere.txt
+│   │   │       OSS_20200104.pptx
+│   │   │       PhyInv.pdf
+│   │   │       test1.py
+│   │   │       test2.py
+│   │   │       
 │   │   └───newbranch4
+│   │           DeepalPhInvestigatory.docx
+│   │           OSS_20200104.pptx
+│   │           Perceptron_18-19_back.jpg
+│   │           Perceptron_18-19_front.jpg
+│   │           PhyInv.pdf
+│   │           test1.py
+│   │           test2.py
+│   │           
 │   ├───statics
+│   │       icon.png
+│   │       
 │   └───test
 │       └───master
 └───__pycache__
+        a.cpython-36.pyc
+        b.cpython-36.pyc
+        server_init.cpython-36.pyc
+        
